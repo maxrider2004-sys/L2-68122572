@@ -1,0 +1,276 @@
+______
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Review</title>
+<nav class="navbar">
+    <div class="logo">🎬 MovieReview</div>
+    <ul class="menu">
+        <li><a href="#">หน้าแรก</a></li>
+        <li><a href="#gallery">แกลเลอรี่</a></li>
+        <li><a href="#reviews">รีวิว</a></li>
+        <li><a href="#contact">ติดต่อ</a></li>
+    </ul>
+    <section id="gallery"></section>
+    <section id="reviews"></section>
+    <section id="contact">
+    <h2>ติดต่อเรา</h2>
+    <p>Email: moviereview@email.com(ไม่ใช่ของจริง)</p>
+</section>
+</nav>
+<style>
+    
+body{
+    
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#111;
+    color:white;
+
+    
+}
+
+/* ===== Banner ===== */
+.hero{
+    height:80vh;
+    background:url("https://picsum.photos/1600/900?movie") center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    background-blend-mode: darken;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.btn{
+    padding:12px 25px;
+    background:#e50914;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+/* ===== Navbar ===== */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 10%;
+    background:#000;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#e50914;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 8%;   /* ลด padding ลง */
+    background:black;
+}
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#e50914;
+}
+.menu{
+    list-style: none;
+    display: flex;          /* ทำให้เรียงแนวนอน */
+    gap: 30px;              /* ระยะห่างแต่ละเมนู */
+    padding: 0;
+    margin: 0;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    white-space: nowrap;    /* กันข้อความตกบรรทัด */
+}
+
+.gallery img:hover{
+    animation: float 0.6s ease;
+}
+
+@keyframes float{
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+.btn:hover{
+    background:#b20710;
+}
+
+/* ===== Section ===== */
+section{
+    padding:50px 10%;
+    text-align:center;
+    
+}
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: url("https://picsum.photos/1600/900?cinema") no-repeat center center/cover;
+    background-attachment: fixed;
+    color:white;
+}
+
+
+h2{
+    margin-bottom:30px;
+    font-size:32px;
+}
+
+/* ===== Gallery Grid ===== */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.gallery img{
+    width:75%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* ===== Cards ===== */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1c1c1c;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(255,255,255,0.1);
+}
+
+.card h3{
+    color:#e50914;
+}
+
+/* ===== Footer ===== */
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    color:gray;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== Banner ===== -->
+<div class="hero">
+    <h1>Movie Review Hub 🎬</h1>
+    <p>รีวิวหนังใหม่ หนังดัง หนังน่าดู</p>
+    <button class="btn">อ่านรีวิวล่าสุด</button>
+</div>
+
+<!-- ===== Gallery ===== -->
+<div class="gallery">
+    <div class="movie">
+        <img src="https://picsum.photos/500/300?random=1">
+        <div class="overlay">Inception</div>
+    </div>
+
+    <div class="movie">
+        <img src="https://picsum.photos/500/300?random=2">
+        <div class="overlay">Interstellar</div>
+    </div>
+
+    <div class="movie">
+        <img src="https://picsum.photos/500/300?random=3">
+        <div class="overlay">Avengers</div>
+    </div>
+
+    <div class="movie">
+        <img src="https://picsum.photos/500/300?random=4">
+        <div class="overlay">Joker</div>
+    </div>
+</div>
+
+<!-- ===== Cards (อย่างน้อย 4 ใบ) ===== -->
+<section>
+    <h2>รีวิวล่าสุด</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Inception</h3>
+            <p>แนว: Sci-Fi / Thriller</p>
+            <p>คะแนน: ⭐⭐⭐⭐☆</p>
+            <button class="btn">อ่านต่อ</button>
+        </div>
+
+        <div class="card">
+            <h3>Avengers: Endgame</h3>
+            <p>แนว: Action / Superhero</p>
+            <p>คะแนน: ⭐⭐⭐⭐⭐</p>
+            <button class="btn">อ่านต่อ</button>
+        </div>
+
+        <div class="card">
+            <h3>Interstellar</h3>
+            <p>แนว: Sci-Fi / Drama</p>
+            <p>คะแนน: ⭐⭐⭐⭐☆</p>
+            <button class="btn">อ่านต่อ</button>
+        </div>
+
+        <div class="card">
+            <h3>Joker</h3>
+            <p>แนว: Drama / Crime</p>
+            <p>คะแนน: ⭐⭐⭐⭐☆</p>
+            <button class="btn">อ่านต่อ</button>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+    © 2026 Movie Review Website | ณรรฐพล นาเจริญ 68122572
+</footer>
+
+</body>
+</html>
