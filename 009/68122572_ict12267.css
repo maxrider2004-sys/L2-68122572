@@ -1,0 +1,33 @@
+form{
+    width: 80%;
+    max-width:600px;
+    margin:0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-sizing: 0 0 10px rgba(0,0,0,0.1);
+}
+
+textarea,
+ select{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:5px;
+    border:none;
+    margin:10px 0;
+    width:100%;
+ }
+ input:focus, textarea:focus, select:focus{
+    outline:none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+
+ }
+ label{
+    display:block;
+    margin-bottom:6px;
+    font-weight: 500;
+    color: #333;
+ }
+ 
